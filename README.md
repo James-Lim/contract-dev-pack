@@ -33,6 +33,34 @@ This repository is used to develop & test the smart contracts for commitground u
     - `build`: Build artifacts are stored in this directory.
     - `migtrations`: Script to test or deploy the contracts
 
+# Prerequisites
+
+1. Install truffle
+
+    ```.bash
+    npm install -g truffle
+    ```
+    You can read truffle install doc [here](https://truffleframework.com/docs/getting_started/installation)
+
+1. Ganache(One click ethereum private net).
+
+    Two options exist. When you run this repository on your local environment, desktop app will help you know what's happening on the blockchain. But for the CI/CD environment, 'ganache-cli' will be a better option.
+    - [ganache-cli](https://github.com/trufflesuite/ganache-cli)
+    - [ganache desktop app](https://truffleframework.com/ganache)
+
+# Run test
+
+- Running test with ganache-cli.
+    ```.bash
+    ./run-test.sh
+    ```
+- Running test with ganache desktop app
+    - First, launch the ganache app
+    - Run the following command
+        ```
+        truffle test
+        ```
+
 # Contributing
 
 1. Fork both projects.
