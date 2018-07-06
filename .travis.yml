@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "stable"
+
+install:
+  - npm install -g truffle
+  - npm install -g ganache-cli
+
+cache:
+  directories:
+    # Replace "grunt-cli" with whatever global binary you're using
+    - $(npm config get prefix)/bin/truffle
+    - $(npm config get prefix)/bin/ganache-cli
+
+script:
+  - ./run-test.sh
