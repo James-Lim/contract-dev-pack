@@ -35,6 +35,12 @@ This repository is used to develop & test the smart contracts for commitground u
 
 # Prerequisites
 
+1. Load submodules
+
+    ```.bash
+    git submodule update --init --recursive
+    ```
+
 1. Install truffle
 
     ```.bash

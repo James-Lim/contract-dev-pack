@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ganache-cli -p 7545 > /dev/null & pid=$!
-if ps | grep $pid;
+if ps -p $pid > /dev/null
 then
   echo "Running ganache..."
 else
@@ -9,6 +9,7 @@ else
   exit 1
 fi
 sleep 5
+truffle compile
 truffle migrate
 sleep 5
 truffle test
